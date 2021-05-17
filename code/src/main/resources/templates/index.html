@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    
+</head>
+<body>  
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Registrar datos</h1>
+            <input id = "DNI" type="number" placeholder="DNI" />
+			<input id = "names" type="text" placeholder="Nombre" />
+            <input id = "apellidoPaterno" type="text" placeholder="Apellido Paterno" />
+			<input id = "apellidoMaterno" type="text" placeholder="Apellido Materno" />
+			<input id = "mail" type="email" placeholder="Email" />
+			<input id = "phone" type="number" placeholder="Telefono" />
+            <input id = "birthday" type="date" placeholder="Fecha de Nacimiento">
+			<button onclick="sendUserData()">Registrarse</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Ingresa tu DNI</h1>
+			<input id = "idUser" type="number" placeholder="DNI" />
+			<button onclick="sendId()">Obtener fecha</button>
+		</form>
+	</div>
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido!</h1>
+				<p>Para obtener tu fecha de vacunacion ingresa tu DNI</p>
+				<button class="ghost" id="signIn">Obtener fecha</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola, amigo!</h1>
+				<p>Si todavia no has registrado tus datos, haz click abajo y completa el formulario para obtener 
+                    tu fecha de vacunacion
+                </p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script th:src="@{/js/index.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</body>
+</html>
