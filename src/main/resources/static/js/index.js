@@ -36,13 +36,13 @@ function sendUserData(){
 	let phone = $('#phone').val();
 	let birthday = $('#birthday').val();
 	var data = JSON.stringify({
-		"dni": dni,
-		"nombres": names,
-		"apellidoP":apellidoP,
-		"apellidoM":apellidoM,
-		"fechaNacimiento": birthday,
-		"telefono": phone,
-		"correoElectronico": mail		
+		"dtoDni": dni,
+		"dtoNombres": names,
+		"dtoApellidoP":apellidoP,
+		"dtoApellidoM":apellidoM,
+		"dtoFechaNacimiento": birthday,
+		"dtoTelefono": phone,
+		"dtoCorreoElectronico": mail			
 		});
 
 	$.ajax({
